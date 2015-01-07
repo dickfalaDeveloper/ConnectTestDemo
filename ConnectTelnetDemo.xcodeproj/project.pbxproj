@@ -14,6 +14,9 @@
 		1A7C7DE41A5D10B20052A647 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7C7DE31A5D10B20052A647 /* Images.xcassets */; };
 		1A7C7DE71A5D10B20052A647 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7C7DE51A5D10B20052A647 /* LaunchScreen.xib */; };
 		1A7C7DF31A5D10B20052A647 /* ConnectTelnetDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C7DF21A5D10B20052A647 /* ConnectTelnetDemoTests.m */; };
+		1A7C7E001A5D110E0052A647 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C7DFD1A5D110E0052A647 /* GCDAsyncSocket.m */; };
+		1A7C7E011A5D110E0052A647 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C7DFF1A5D110E0052A647 /* GCDAsyncUdpSocket.m */; };
+		1A7C7E041A5D11390052A647 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7C7E031A5D11390052A647 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		1A7C7DEC1A5D10B20052A647 /* ConnectTelnetDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConnectTelnetDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7C7DF11A5D10B20052A647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7C7DF21A5D10B20052A647 /* ConnectTelnetDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectTelnetDemoTests.m; sourceTree = "<group>"; };
+		1A7C7DFC1A5D110E0052A647 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		1A7C7DFD1A5D110E0052A647 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1A7C7DFE1A5D110E0052A647 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		1A7C7DFF1A5D110E0052A647 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		1A7C7E031A5D11390052A647 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7C7E041A5D11390052A647 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 		1A7C7DCA1A5D10B10052A647 = {
 			isa = PBXGroup;
 			children = (
+				1A7C7E031A5D11390052A647 /* CFNetwork.framework */,
 				1A7C7DD51A5D10B10052A647 /* ConnectTelnetDemo */,
 				1A7C7DEF1A5D10B20052A647 /* ConnectTelnetDemoTests */,
 				1A7C7DD41A5D10B10052A647 /* Products */,
@@ -81,6 +91,7 @@
 		1A7C7DD51A5D10B10052A647 /* ConnectTelnetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1A7C7E021A5D11160052A647 /* GCDAsyncSocket */,
 				1A7C7DDA1A5D10B20052A647 /* AppDelegate.h */,
 				1A7C7DDB1A5D10B20052A647 /* AppDelegate.m */,
 				1A7C7DDD1A5D10B20052A647 /* ViewController.h */,
@@ -117,6 +128,17 @@
 				1A7C7DF11A5D10B20052A647 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A7C7E021A5D11160052A647 /* GCDAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				1A7C7DFC1A5D110E0052A647 /* GCDAsyncSocket.h */,
+				1A7C7DFD1A5D110E0052A647 /* GCDAsyncSocket.m */,
+				1A7C7DFE1A5D110E0052A647 /* GCDAsyncUdpSocket.h */,
+				1A7C7DFF1A5D110E0052A647 /* GCDAsyncUdpSocket.m */,
+			);
+			name = GCDAsyncSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7C7E001A5D110E0052A647 /* GCDAsyncSocket.m in Sources */,
+				1A7C7E011A5D110E0052A647 /* GCDAsyncUdpSocket.m in Sources */,
 				1A7C7DDF1A5D10B20052A647 /* ViewController.m in Sources */,
 				1A7C7DDC1A5D10B20052A647 /* AppDelegate.m in Sources */,
 				1A7C7DD91A5D10B20052A647 /* main.m in Sources */,
